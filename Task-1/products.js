@@ -189,7 +189,7 @@ db.products.insertMany([
 //  2. Find the product price which are between 400 to 800
 
 // Answer:
-          db.products.find({"product_price":{$gt:400,$lt:800}}).toArray()
+          db.products.find({product_price:{$gt:400,$lt:800}}).toArray()
 
          
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -197,14 +197,14 @@ db.products.insertMany([
 //  3. Find the product price which are not between 400 to 600
 
 // Answer:
-          db.products.find({"product_price":{$not:{$gt:400,$lt:600}}}).toArray()
+          db.products.find({product_price:{$not:{$gt:400,$lt:600}}}).toArray()
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //  4. List the four product which are grater than 500 in price 
 
 // Answer:
-         db.products.find({"product_price":{$gt:500}}).limit(4)   
+         db.products.find({product_price:{$gt:500}}).limit(4)   
   // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //  5. Find the product name and product material of each products 
@@ -217,7 +217,7 @@ db.products.insertMany([
 //  6.Find the product with a row "id" of 10
 
 // Answer:
-       db.products.find({"id":"10"})
+       db.products.find({id:"10"})
         
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -231,7 +231,7 @@ db.products.insertMany([
 //  8.Find all products which contain the value of soft in product material 
 
 // Answer: 
-     db.products.find({"product_material":"Soft"}) 
+     db.products.find({product_material:"Soft"}) 
    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 //  9.Find products which contain product color indigo  and product price 492.00
