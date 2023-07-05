@@ -237,7 +237,7 @@ db.products.insertMany([
 //  9.Find products which contain product color indigo  and product price 492.00
 
 // Answer:    
-      db.products.find({$or:[{"product_color":"indigo"},{"product_price":492.00}]}) 
+      db.products.find({$or:[{product_color:"indigo"},{product_price:492.00}]}) 
 
   // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -252,6 +252,6 @@ db.products.insertMany([
 ]);
 
 // deleting the products which as same price
-         db.products.deleteMany({"product_price":36,"product_price":47});
+         db.products.deleteMany({product_price:36,product_price:47});
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------
