@@ -62,6 +62,10 @@ db.zen.aggregate([
 //5. Find all the mentors with who has the mentee's count more than 15
 
 //Answer:
+db.zen.aggregate([
+    {$group: {_id:"$mentors", count:"$mentee's"}},
+    {$match: {_id: {$ne:null}, count:{$gte:15}}}
+]);
 
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------------------
